@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 443649793}
   - component: {fileID: 443649792}
   - component: {fileID: 443649791}
+  - component: {fileID: 443649794}
+  - component: {fileID: 443649795}
   m_Layer: 0
   m_Name: Tail
   m_TagString: Untagged
@@ -147,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 443649789}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.012, y: -0.303, z: 0}
+  m_LocalPosition: {x: -0.031, y: -0.095, z: 0}
   m_LocalScale: {x: 0.13077728, y: 0.1555847, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -204,8 +206,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 1.6906667}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 8, y: 8}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 8, y: 6.875}
     newSize: {x: 8, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -271,6 +273,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &443649794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443649789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609766be8eda4267aa9c5e61e4a8e08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TailWeaponArc
+  swingCooldown: 1
+  damage: 1
+  swingAngle: 90
+  swingDuration: 0.2
+  lastSwingTime: 0
+  col: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &443649795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443649789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af13a5f10798410587a52cc3d3f4311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TailWeaponArcDynamic
+  swingCooldown: 0.8
+  swingDuration: 0.2
+  swingAngle: 180
+  damage: 3
+  spriteOffset: 90
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
